@@ -8,8 +8,30 @@
 </head>
 <body>
   <div class="overlay">
-    <div class="quiz-container">
-      <h1>Dynamic Quiz App</h1>
+    <div class="auth-container">
+      <div id="auth-box">
+        <h1>Welcome to QuizIt</h1>
+        <div id="login-form">
+          <input type="text" id="login-username" placeholder="Username" />
+          <input type="password" id="login-password" placeholder="Password" />
+          <button onclick="login()">Login</button>
+          <p>Don't have an account? <a href="#" onclick="toggleForms()">Register</a></p>
+        </div>
+
+        <div id="signup-form" class="hidden">
+          <input type="text" id="signup-username" placeholder="Username" />
+          <input type="password" id="signup-password" placeholder="Password" />
+          <button onclick="signup()">Sign Up</button>
+          <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-container hidden" id="quiz-section">
+      <div class="header">
+        <h1>Dynamic Quiz App</h1>
+        <button class="signout-btn" onclick="signOut()">Sign Out</button>
+      </div>
       <div id="quiz-box">
         <div id="question">Loading...</div>
         <div id="options"></div>
@@ -21,6 +43,7 @@
       </div>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
